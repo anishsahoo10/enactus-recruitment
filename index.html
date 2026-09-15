@@ -3,548 +3,1076 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enactus Jain University – Recruitment 2026</title>
-  <meta name="description" content="Apply to join Enactus Jain University. Recruitment 2026 is now open." />
+  <title>Enactus Jain University | School of Commerce | Social Entrepreneurship</title>
+  <meta name="description" content="Official website of Enactus JAIN (Deemed-to-be University), School of Commerce, Bengaluru. Empowering students to build entrepreneurial, sustainable solutions for real-world social impact." />
+  <meta name="keywords" content="Enactus, Jain University, Social Entrepreneurship, Sustainability, UN SDGs, Bengaluru, Enactus India, Student Projects" />
+  <meta property="og:title" content="Enactus Jain University | Social Entrepreneurship" />
+  <meta property="og:description" content="Discover student-led social enterprises and sustainable impact initiatives by Enactus JAIN (Deemed-to-be University)." />
+  <meta property="og:image" content="assets/enactus-removebg-preview.png" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#FFC72C" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
 
-    :root {
-      --yellow: #FFC72C;
-      --yellow-bg: #FFFBEF;
-      --yellow-light: #FFF3C4;
-      --black: #111111;
-      --gray-800: #333333;
-      --gray-600: #555555;
-      --gray-400: #888888;
-      --gray-200: #E5E5E5;
-      --gray-100: #F7F7F7;
-      --white: #FFFFFF;
-      --font: 'Inter', -apple-system, sans-serif;
-      --radius: 14px;
-      --radius-sm: 8px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--font);
-      background: var(--white);
-      color: var(--black);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    /* UTILS */
-    .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-    .section { padding: 80px 0; }
-
-    /* FADE IN */
-    .fade { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade.in { opacity: 1; transform: translateY(0); }
-    .d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.18s; }
-    .d3 { transition-delay: 0.26s; } .d4 { transition-delay: 0.34s; }
-    .d5 { transition-delay: 0.42s; } .d6 { transition-delay: 0.5s; }
-
-    /* BUTTONS */
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-family: var(--font); font-weight: 600; font-size: 0.95rem;
-      padding: 13px 26px; border-radius: 100px; border: none;
-      cursor: pointer; text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    .btn-yellow { background: var(--yellow); color: var(--black); }
-    .btn-yellow:hover { background: #e6b322; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,199,44,0.4); }
-    .btn-outline { background: transparent; color: var(--black); border: 1.5px solid var(--gray-200); }
-    .btn-outline:hover { border-color: var(--black); transform: translateY(-1px); }
-    .btn-lg { padding: 16px 36px; font-size: 1rem; }
-
-    /* ── HERO ── */
-    #hero {
-      min-height: 100svh;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center;
-      padding: 60px 20px 80px;
-      background: var(--white);
-      position: relative;
-      overflow: hidden;
-    }
-    #hero::before {
-      content: '';
-      position: absolute;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(255,199,44,0.15) 0%, transparent 70%);
-      top: -100px; left: 50%; transform: translateX(-50%);
-      pointer-events: none;
-    }
-    .logo-wrap { margin-bottom: 24px; line-height: 1; }
-    .logo-wrap img { height: 72px; width: auto; object-fit: contain; }
-    .hero-tag {
-      display: inline-flex; align-items: center; gap: 7px;
-      background: var(--yellow-light); color: #7a5a00;
-      font-size: 0.78rem; font-weight: 600;
-      letter-spacing: 0.07em; text-transform: uppercase;
-      padding: 5px 14px; border-radius: 100px;
-      margin-bottom: 24px;
-    }
-    .hero-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--yellow); }
-    .hero-title {
-      font-size: clamp(2.2rem, 7vw, 4.8rem);
-      font-weight: 800; line-height: 1.1;
-      letter-spacing: -0.03em; color: var(--black);
-      margin-bottom: 20px;
-    }
-    .hero-title span { color: var(--yellow); }
-    .hero-sub {
-      font-size: clamp(1rem, 2.5vw, 1.15rem);
-      color: var(--gray-600); max-width: 520px;
-      margin: 0 auto 36px;
-    }
-    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
-
-    /* ── ABOUT ── */
-    #about { background: var(--gray-100); }
-    .about-inner {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 60px; align-items: center;
-    }
-    .section-tag {
-      display: inline-block;
-      font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: #7a5a00; background: var(--yellow-light);
-      padding: 4px 12px; border-radius: 100px;
-      margin-bottom: 14px;
-    }
-    .section-title {
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      font-weight: 700; line-height: 1.2;
-      letter-spacing: -0.02em; margin-bottom: 16px;
-    }
-    .section-body { color: var(--gray-600); font-size: 0.97rem; line-height: 1.75; margin-bottom: 12px; }
-    .stats { display: flex; flex-direction: column; gap: 14px; }
-    .stat-card {
-      background: var(--white); border: 1px solid var(--gray-200);
-      border-radius: var(--radius); padding: 20px 24px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .stat-card:hover { transform: translateX(4px); box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
-    .stat-num { font-size: 2rem; font-weight: 800; color: var(--yellow); letter-spacing: -0.03em; }
-    .stat-lbl { font-size: 0.85rem; color: var(--gray-400); margin-top: 2px; }
-
-    /* ── WHY JOIN ── */
-    #why { background: var(--white); }
-    .cards-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 16px; margin-top: 48px;
-    }
-    .card {
-      background: var(--gray-100); border: 1px solid var(--gray-200);
-      border-radius: var(--radius); padding: 24px;
-      transition: all 0.2s ease;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); border-color: var(--yellow); }
-    .card-icon {
-      width: 40px; height: 40px; border-radius: var(--radius-sm);
-      background: var(--yellow-light);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 14px;
-    }
-    .card-icon svg { width: 18px; height: 18px; color: #7a5a00; }
-    .card-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
-    .card-desc { font-size: 0.85rem; color: var(--gray-600); line-height: 1.65; }
-
-    /* ── TEAMS ── */
-    #teams { background: var(--gray-100); }
-    .teams-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 12px; margin-top: 48px;
-    }
-    .team-card {
-      background: var(--white); border: 1px solid var(--gray-200);
-      border-radius: var(--radius); padding: 20px;
-      transition: all 0.2s ease;
-    }
-    .team-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.07); border-color: var(--yellow); }
-    .team-icon {
-      width: 36px; height: 36px; border-radius: var(--radius-sm);
-      background: var(--yellow-light);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 12px;
-    }
-    .team-icon svg { width: 16px; height: 16px; color: #7a5a00; }
-    .team-name { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
-    .team-desc { font-size: 0.8rem; color: var(--gray-600); line-height: 1.6; }
-
-    /* ── TIMELINE ── */
-    #timeline { background: var(--white); }
-    .tl-steps {
-      display: flex; gap: 0;
-      margin-top: 48px; position: relative;
-    }
-    .tl-steps::before {
-      content: ''; position: absolute;
-      top: 19px; left: 20px; right: 20px; height: 2px;
-      background: var(--gray-200);
-    }
-    .tl-step {
-      flex: 1; display: flex; flex-direction: column;
-      align-items: center; text-align: center;
-      position: relative; padding-top: 0;
-    }
-    .tl-dot {
-      width: 38px; height: 38px; border-radius: 50%;
-      background: var(--white); border: 2px solid var(--gray-200);
-      display: flex; align-items: center; justify-content: center;
-      position: relative; z-index: 1; margin-bottom: 14px;
-      transition: all 0.2s;
-    }
-    .tl-dot.active { background: var(--yellow); border-color: var(--yellow); }
-    .tl-dot svg { width: 15px; height: 15px; color: var(--gray-400); }
-    .tl-dot.active svg { color: var(--black); }
-    .tl-label { font-size: 0.82rem; font-weight: 600; color: var(--black); }
-    .tl-sub { font-size: 0.73rem; color: var(--gray-400); margin-top: 3px; }
-
-    /* ── FAQ ── */
-    #faq { background: var(--gray-100); }
-    .faq-wrap { max-width: 680px; margin: 48px auto 0; }
-    .faq-item { border-bottom: 1px solid var(--gray-200); }
-    .faq-item:first-child { border-top: 1px solid var(--gray-200); }
-    .faq-q {
-      width: 100%; background: none; border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      padding: 18px 0; font-family: var(--font); font-size: 0.95rem;
-      font-weight: 600; color: var(--black); text-align: left;
-      transition: color 0.2s;
-    }
-    .faq-q:hover { color: #7a5a00; }
-    .faq-arrow { width: 18px; height: 18px; flex-shrink: 0; color: var(--gray-400); transition: transform 0.3s; }
-    .faq-item.open .faq-arrow { transform: rotate(180deg); color: var(--yellow); }
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s; }
-    .faq-item.open .faq-a { max-height: 160px; padding-bottom: 16px; }
-    .faq-a p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.7; }
-
-    /* ── CTA ── */
-    #cta {
-      background: var(--yellow);
-      text-align: center; padding: 80px 20px;
-    }
-    #cta .section-title { color: var(--black); }
-    #cta .section-body { color: rgba(0,0,0,0.65); max-width: 480px; margin: 0 auto 36px; }
-    .btn-black { background: var(--black); color: var(--white); }
-    .btn-black:hover { background: #333; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--black); color: var(--white);
-      padding: 40px 20px;
-    }
-    .footer-inner {
-      max-width: 1080px; margin: 0 auto;
-      display: flex; flex-wrap: wrap;
-      align-items: center; justify-content: space-between; gap: 20px;
-    }
-    .footer-brand { display: flex; align-items: center; gap: 10px; }
-    .footer-brand img { height: 28px; filter: brightness(0) invert(1); }
-    .footer-brand span { font-size: 0.9rem; font-weight: 600; color: var(--white); }
-    .footer-links { display: flex; gap: 20px; }
-    .footer-link {
-      color: #888; font-size: 0.85rem; text-decoration: none;
-      display: flex; align-items: center; gap: 6px;
-      transition: color 0.2s;
-    }
-    .footer-link:hover { color: var(--yellow); }
-    .footer-link svg { width: 15px; height: 15px; }
-    .footer-copy { width: 100%; text-align: center; font-size: 0.75rem; color: #555; margin-top: 8px; }
-
-    /* RESPONSIVE */
-    @media (max-width: 860px) {
-      .about-inner { grid-template-columns: 1fr; gap: 40px; }
-      .cards-grid { grid-template-columns: repeat(2, 1fr); }
-      .teams-grid { grid-template-columns: repeat(2, 1fr); }
-      .tl-steps { flex-wrap: wrap; gap: 20px; }
-      .tl-steps::before { display: none; }
-      .tl-step { flex: 0 0 calc(50% - 10px); flex-direction: row; text-align: left; gap: 14px; align-items: flex-start; }
-      .tl-dot { flex-shrink: 0; margin-bottom: 0; }
-    }
-    @media (max-width: 540px) {
-      .section { padding: 60px 0; }
-      .cards-grid { grid-template-columns: 1fr; }
-      .teams-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .hero-btns { flex-direction: column; align-items: center; }
-      .btn-lg { width: 100%; justify-content: center; }
-      .tl-step { flex: 0 0 100%; }
-      .footer-inner { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="logo-wrap fade">
-    <img src="enactus-removebg-preview.png" alt="Enactus Jain University" />
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <span class="pill">Official</span> Enactus JAIN (Deemed-to-be University) • School of Commerce, Bengaluru
   </div>
-  <div class="hero-tag fade d1"><span class="hero-tag-dot"></span> Recruitment 2026 is Open</div>
-  <h1 class="hero-title fade d2">Enactus<br/><span>Jain University</span></h1>
-  <p class="hero-sub fade d3">Join a global community of students building entrepreneurial solutions for real-world challenges.</p>
-  <div class="hero-btns fade d4">
-    <a href="https://forms.gle/6APEtEBYs4JjuH37A" target="_blank" rel="noopener" class="btn btn-yellow btn-lg">
-      Apply Now
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-    </a>
-    <a href="#about" class="btn btn-outline btn-lg">Learn More</a>
-  </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container">
-    <div class="about-inner">
-      <div>
-        <span class="section-tag fade">About</span>
-        <h2 class="section-title fade d1">What is Enactus?</h2>
-        <p class="section-body fade d2">Enactus is a global non-profit empowering students to use entrepreneurial action to solve social, environmental, and economic challenges.</p>
-        <p class="section-body fade d3">Through collaborative projects and leadership, students create real impact while building practical skills for their careers.</p>
+  <!-- STICKY SITE HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-inner">
+        <!-- Dual Equal Branding (Jain 2x Size First, Enactus Second) -->
+        <a href="#hero" class="brand-group">
+          <img src="assets/jain logo png.png" alt="Jain (Deemed-to-be University) Logo" class="brand-logo-jain" />
+          <div class="brand-divider"></div>
+          <img src="assets/enactus-removebg-preview.png" alt="Enactus Logo" class="brand-logo-enactus" />
+        </a>
+
+        <!-- Organized Floating Nav Pill Container -->
+        <nav class="nav-container" id="navContainer">
+          <ul class="nav-pill-menu">
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#events" class="nav-item">Events</a></li>
+            <li><a href="#team" class="nav-item">Leadership</a></li>
+            <li><a href="#partners" class="nav-item">Alliances</a></li>
+            <li>
+              <a href="#recruitment" class="nav-item nav-item-recruitment">
+                Recruitment
+                <span class="nav-badge-closed">Closed</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div class="nav-cta">
+          <a href="https://www.instagram.com/enactus_ju" target="_blank" rel="noopener" class="btn btn-yellow btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            @enactus_ju
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
-      <div class="stats">
-        <div class="stat-card fade d2">
-          <div class="stat-num" data-count="35" data-suffix="+">0+</div>
-          <div class="stat-lbl">Countries worldwide</div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-badge-wrap">
+        <span class="dot"></span>
+        <span>School of Commerce • JAIN (Deemed-to-be University)</span>
+      </div>
+
+      <h1 class="hero-title">
+        Empowering Communities Through <span class="highlight">Entrepreneurial Action</span>
+      </h1>
+
+      <p class="hero-desc">
+        We are a student-led organization driving measurable, purpose-first social enterprises. By transforming innovative ideas into sustainable ventures, we advance the United Nations 17 Sustainable Development Goals.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-yellow btn-lg">Explore 10 Projects</a>
+        <a href="#team" class="btn btn-outline btn-lg">Meet 2026-27 Team</a>
+        <a href="#recruitment" class="btn btn-black btn-lg">Recruitment Status</a>
+      </div>
+
+      <!-- Quick Metrics Counter Bar -->
+      <div class="hero-stats-bar">
+        <div class="hero-stat-item">
+          <div class="hero-stat-num" data-target="10">10<span>+</span></div>
+          <div class="hero-stat-label">Sustainable Projects</div>
         </div>
-        <div class="stat-card fade d3">
-          <div class="stat-num" data-count="1700" data-suffix="+">0+</div>
-          <div class="stat-lbl">Universities participating</div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num" data-target="1500">1,500<span>+</span></div>
+          <div class="hero-stat-label">Clothes Repurposed</div>
         </div>
-        <div class="stat-card fade d4">
-          <div class="stat-num" data-count="72000" data-suffix="+">0+</div>
-          <div class="stat-lbl">Student members globally</div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num" data-target="72000">72,000<span>+</span></div>
+          <div class="hero-stat-label">Global Enactus Peers</div>
+        </div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num" data-target="36">36<span>+</span></div>
+          <div class="hero-stat-label">Countries Worldwide</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- WHY JOIN -->
-<section id="why" class="section">
-  <div class="container">
-    <div style="text-align:center;">
-      <span class="section-tag fade">Why Join</span>
-      <h2 class="section-title fade d1">Why Join Enactus?</h2>
-    </div>
-    <div class="cards-grid">
-      <div class="card fade d1">
-        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-        <div class="card-title">Real-World Experience</div>
-        <div class="card-desc">Work on projects that create measurable impact beyond the classroom.</div>
-      </div>
-      <div class="card fade d2">
-        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div class="card-title">Leadership</div>
-        <div class="card-desc">Take ownership of initiatives and lead multidisciplinary teams.</div>
-      </div>
-      <div class="card fade d3">
-        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <div class="card-title">Networking</div>
-        <div class="card-desc">Connect with students, mentors, and industry leaders globally.</div>
-      </div>
-      <div class="card fade d1">
-        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
-        <div class="card-title">Innovation</div>
-        <div class="card-desc">Transform ideas into sustainable, impactful solutions.</div>
-      </div>
-      <div class="card fade d2">
-        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <div class="card-title">Professional Growth</div>
-        <div class="card-desc">Build skills employers and startups actively look for.</div>
-      </div>
-      <div class="card fade d3">
-        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
-        <div class="card-title">Portfolio</div>
-        <div class="card-desc">Graduate with real projects and meaningful experience.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAMS -->
-<section id="teams" class="section">
-  <div class="container">
-    <div style="text-align:center;">
-      <span class="section-tag fade">Open Roles</span>
-      <h2 class="section-title fade d1">Recruitment Teams</h2>
-    </div>
-    <div class="teams-grid">
-      <div class="team-card fade d1">
-        <div class="team-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-        <div class="team-name">Technical</div>
-        <div class="team-desc">Apps, websites, AI tools &amp; infrastructure.</div>
-      </div>
-      <div class="team-card fade d2">
-        <div class="team-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <div class="team-name">Marketing</div>
-        <div class="team-desc">Campaigns, brand &amp; digital presence.</div>
-      </div>
-      <div class="team-card fade d3">
-        <div class="team-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <div class="team-name">Finance</div>
-        <div class="team-desc">Budgeting, sponsorships &amp; planning.</div>
-      </div>
-      <div class="team-card fade d4">
-        <div class="team-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <div class="team-name">Documentation</div>
-        <div class="team-desc">Reports, records &amp; official docs.</div>
-      </div>
-      <div class="team-card fade d1">
-        <div class="team-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-        <div class="team-name">Research</div>
-        <div class="team-desc">Market research &amp; impact assessment.</div>
-      </div>
-      <div class="team-card fade d2">
-        <div class="team-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
-        <div class="team-name">Operations</div>
-        <div class="team-desc">Logistics, coordination &amp; execution.</div>
-      </div>
-      <div class="team-card fade d3">
-        <div class="team-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <div class="team-name">Public Relations</div>
-        <div class="team-desc">Partnerships, outreach &amp; communication.</div>
-      </div>
-      <div class="team-card fade d4" style="background:var(--yellow-light);border-color:var(--yellow);">
-        <div class="team-icon" style="background:rgba(255,199,44,0.3);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="11" x2="17" y2="11"/><line x1="20" y1="8" x2="20" y2="14"/></svg></div>
-        <div class="team-name">Not sure yet?</div>
-        <div class="team-desc">Apply and we will help find the right fit for you.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section id="timeline" class="section">
-  <div class="container">
-    <div style="text-align:center;">
-      <span class="section-tag fade">Process</span>
-      <h2 class="section-title fade d1">How It Works</h2>
-    </div>
-    <div class="tl-steps fade d2">
-      <div class="tl-step">
-        <div class="tl-dot active">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+  <!-- ABOUT & ETHOS SECTION -->
+  <section id="about" class="section section-gray">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-story">
+          <span class="section-tag">About Enactus JU</span>
+          <h2 class="section-title">Who We Are &amp; What Drives Us</h2>
+          <p>
+            Enactus is the world's largest experiential learning platform dedicated to creating a better, more sustainable world while developing the next generation of entrepreneurial leaders and social innovators.
+          </p>
+          <p>
+            In India, since 2003, Enactus has been shaping NextGen leaders in collaboration with primary partner <strong>KPMG India</strong>, spanning across 95 collegiate institutions with 4,500+ active student leaders.
+          </p>
+          <p>
+            At <strong>Enactus JAIN (Deemed-to-be University)</strong>, housed under the prestigious <strong>School of Commerce</strong>, we bring together passionate students, visionary academic mentors, and industry experts to design, test, and scale community-first sustainable business models.
+          </p>
         </div>
-        <div><div class="tl-label">Apply</div><div class="tl-sub">Fill the form</div></div>
-      </div>
-      <div class="tl-step">
-        <div class="tl-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+
+        <div class="ethos-cards">
+          <div class="ethos-card">
+            <div class="ethos-letter">EN</div>
+            <div class="ethos-text">
+              <h4>Entrepreneurial</h4>
+              <p>Igniting business innovation, creative thinking, and financial viability to solve community needs.</p>
+            </div>
+          </div>
+          <div class="ethos-card">
+            <div class="ethos-letter">ACT</div>
+            <div class="ethos-text">
+              <h4>Action</h4>
+              <p>Stepping beyond classroom theory into ground-level execution, product launches, and grassroots engagement.</p>
+            </div>
+          </div>
+          <div class="ethos-card">
+            <div class="ethos-letter">US</div>
+            <div class="ethos-text">
+              <h4>Us</h4>
+              <p>A unified collective of students, faculty mentors, alumni, and NGO partners driving shared prosperity.</p>
+            </div>
+          </div>
         </div>
-        <div><div class="tl-label">Review</div><div class="tl-sub">We evaluate</div></div>
       </div>
-      <div class="tl-step">
-        <div class="tl-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+
+      <!-- SDG Matrix -->
+      <div class="sdg-section">
+        <div class="sdg-header">
+          <span class="section-tag" style="background:#E0F2FE;color:#0369A1;">Global Alignment</span>
+          <h3 style="font-family:var(--font-heading);font-size:1.8rem;margin-top:6px;">Advancing the United Nations 17 SDGs</h3>
+          <p style="color:var(--gray-600);font-size:0.95rem;max-width:620px;margin:8px auto 0;">
+            Our projects directly target United Nations Sustainable Development Goals to ensure measurable environmental and social outcomes.
+          </p>
         </div>
-        <div><div class="tl-label">Interview</div><div class="tl-sub">Brief chat</div></div>
-      </div>
-      <div class="tl-step">
-        <div class="tl-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+        <div class="sdg-grid">
+          <div class="sdg-pill" style="border-top-color:#C5192D;">
+            <span class="num">SDG 4</span>
+            Quality Education
+          </div>
+          <div class="sdg-pill" style="border-top-color:#FD6925;">
+            <span class="num">SDG 9</span>
+            Industry &amp; Innovation
+          </div>
+          <div class="sdg-pill" style="border-top-color:#DD1367;">
+            <span class="num">SDG 10</span>
+            Reduced Inequalities
+          </div>
+          <div class="sdg-pill" style="border-top-color:#FD9D24;">
+            <span class="num">SDG 11</span>
+            Sustainable Cities
+          </div>
+          <div class="sdg-pill" style="border-top-color:#BF8B2E;">
+            <span class="num">SDG 12</span>
+            Responsible Consumption
+          </div>
+          <div class="sdg-pill" style="border-top-color:#3F7E44;">
+            <span class="num">SDG 13</span>
+            Climate Action
+          </div>
+          <div class="sdg-pill" style="border-top-color:#19486A;">
+            <span class="num">SDG 17</span>
+            Partnerships for Goals
+          </div>
         </div>
-        <div><div class="tl-label">Selected</div><div class="tl-sub">Results out</div></div>
-      </div>
-      <div class="tl-step">
-        <div class="tl-dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="11" x2="17" y2="11"/><line x1="20" y1="8" x2="20" y2="14"/></svg>
-        </div>
-        <div><div class="tl-label">Onboard</div><div class="tl-sub">Welcome aboard</div></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- FLAGSHIP PROJECTS SECTION (CLEAN SVG ICONS) -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sustainable Ventures</span>
+        <h2 class="section-title">Our Flagship Projects</h2>
+        <p class="section-subtitle">
+          Engineered by students to substitute harmful single-use plastics, create circular economies, and empower artisan communities.
+        </p>
+      </div>
 
-<!-- CTA -->
-<section id="cta">
-  <div class="container" style="text-align:center;">
-    <span class="section-tag fade" style="background:rgba(0,0,0,0.1);color:rgba(0,0,0,0.7);">Apply Today</span>
-    <h2 class="section-title fade d1">Ready to Build Something<br/>That Matters?</h2>
-    <p class="section-body fade d2">Become part of a global community of innovators, entrepreneurs, and changemakers. Applications close soon.</p>
-    <div class="fade d3">
-      <a href="https://forms.gle/6APEtEBYs4JjuH37A" target="_blank" rel="noopener" class="btn btn-black btn-lg">
-        Apply Now
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
+      <!-- Category Filter Tabs -->
+      <div class="projects-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects (10)</button>
+        <button class="filter-btn" data-filter="eco">Eco-Friendly &amp; Upcycling</button>
+        <button class="filter-btn" data-filter="food">Conscious Food</button>
+        <button class="filter-btn" data-filter="lifestyle">Lifestyle &amp; Fashion</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- 1. Bee Bliss Brownies -->
+        <div class="project-card" data-category="food">
+          <div>
+            <div class="project-top">
+              <div class="project-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <span class="project-category">Conscious Food</span>
+            </div>
+            <h3 class="project-name">Project Bee Bliss Brownies</h3>
+            <p class="project-desc">
+              Creates wholesome, ragi-based brownies naturally sweetened with pure honey. Combining taste, texture, and high nutrition, it provides a guilt-free, healthy alternative to conventional desserts for mindful consumers.
+            </p>
+          </div>
+          <div class="project-meta">
+            <span class="project-sdg-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Zero Refined Sugar
+            </span>
+            <span>SDG 12</span>
+          </div>
+        </div>
+
+        <!-- 2. Chocobons -->
+        <div class="project-card" data-category="food">
+          <div>
+            <div class="project-top">
+              <div class="project-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </div>
+              <span class="project-category">Conscious Food</span>
+            </div>
+            <h3 class="project-name">Project Chocobons</h3>
+            <p class="project-desc">
+              Artisanal healthy chocolates packed with wholesome, nutrient-rich ingredients. Specially crafted to eliminate chemical preservatives and refined additives, making mindful snacking indulgent and nutritious.
+            </p>
+          </div>
+          <div class="project-meta">
+            <span class="project-sdg-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Clean Ingredients
+            </span>
+            <span>SDG 3 &amp; 12</span>
+          </div>
+        </div>
+
+        <!-- 3. Crunchware -->
+        <div class="project-card" data-category="eco">
+          <div>
+            <div class="project-top">
+              <div class="project-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"/><line x1="15" y1="2" x2="15" y2="22"/><line x1="9" y1="2" x2="9" y2="22"/></svg>
+              </div>
+              <span class="project-category">Eco-Friendly</span>
+            </div>
+            <h3 class="project-name">Project Crunchware</h3>
+            <p class="project-desc">
+              Edible and 100% biodegradable cutlery manufactured from natural grains. Formulated in partnership with <em>Manav Charities</em> as a zero-waste alternative to single-use plastic spoons and forks for food businesses.
+            </p>
+          </div>
+          <div class="project-meta">
+            <span class="project-sdg-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Plastic Alternative
+            </span>
+            <span>SDG 12 &amp; 14</span>
+          </div>
+        </div>
+
+        <!-- 4. Drapi -->
+        <div class="project-card" data-category="eco">
+          <div>
+            <div class="project-top">
+              <div class="project-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><line x1="4" y1="9" x2="20" y2="9"/></svg>
+              </div>
+              <span class="project-category">Upcycling</span>
+            </div>
+            <h3 class="project-name">Project Drapi</h3>
+            <p class="project-desc">
+              Durable, reusable canvas event banners developed to replace hazardous single-use PVC flex banners. Delivers premium visual quality for corporate campaigns and institutional events while dramatically cutting landfill waste.
+            </p>
+          </div>
+          <div class="project-meta">
+            <span class="project-sdg-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Zero Flex Plastic
+            </span>
+            <span>SDG 11 &amp; 12</span>
+          </div>
+        </div>
+
+        <!-- 5. Fable -->
+        <div class="project-card" data-category="eco">
+          <div>
+            <div class="project-top">
+              <div class="project-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+              </div>
+              <span class="project-category">Eco-Friendly</span>
+            </div>
+            <h3 class="project-name">Project Fable</h3>
+            <p class="project-desc">
+              Artistic, long-lasting bookmarks handcrafted entirely from recycled kraft paper. Celebrated during Teachers' Day as tokens of appreciation, combining minimalist aesthetics with environmental responsibility.
+            </p>
+          </div>
+          <div class="project-meta">
+            <span class="project-sdg-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Recycled Kraft Paper
+            </span>
+            <span>SDG 12</span>
+          </div>
+        </div>
+
+        <!-- 6. Lumina -->
+        <div class="project-card" data-category="lifestyle">
+          <div>
+            <div class="project-top">
+              <div class="project-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+              </div>
+              <span class="project-category">Lifestyle</span>
+            </div>
+            <h3 class="project-name">Project Lumina</h3>
+            <p class="project-desc">
+              Non-toxic, clean-burning soy wax candles engineered as an eco-conscious alternative to petroleum paraffin. Produced in collaboration with <em>Chilume Social Service Society</em> to create sustainable artisan livelihoods.
+            </p>
+          </div>
+          <div class="project-meta">
+            <span class="project-sdg-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Zero Paraffin Soot
+            </span>
+            <span>SDG 8 &amp; 12</span>
+          </div>
+        </div>
+
+        <!-- 7. Niraa -->
+        <div class="project-card" data-category="lifestyle">
+          <div>
+            <div class="project-top">
+              <div class="project-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+              </div>
+              <span class="project-category">Lifestyle</span>
+            </div>
+            <h3 class="project-name">Project Niraa</h3>
+            <p class="project-desc">
+              Nourishing handmade goat milk soaps enriched with pure Vitamin E. Each bar is presented inside a reclaimed coconut shell holder, eliminating disposable synthetic packaging and celebrating traditional craftsmanship.
+            </p>
+          </div>
+          <div class="project-meta">
+            <span class="project-sdg-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Coconut Shell Packaging
+            </span>
+            <span>SDG 12</span>
+          </div>
+        </div>
+
+        <!-- 8. Totva -->
+        <div class="project-card" data-category="eco">
+          <div>
+            <div class="project-top">
+              <div class="project-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <span class="project-category">Upcycling</span>
+            </div>
+            <h3 class="project-name">Project Totva</h3>
+            <p class="project-desc">
+              Fashion-forward, heavy-duty tote bags crafted from upcycled event canvas banners. Each bag gives discarded materials a meaningful second life, transforming waste into durable daily accessories.
+            </p>
+          </div>
+          <div class="project-meta">
+            <span class="project-sdg-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Circular Upcycling
+            </span>
+            <span>SDG 12</span>
+          </div>
+        </div>
+
+        <!-- 9. Vayana -->
+        <div class="project-card" data-category="lifestyle">
+          <div>
+            <div class="project-top">
+              <div class="project-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="project-category">Lifestyle</span>
+            </div>
+            <h3 class="project-name">Project Vayana</h3>
+            <p class="project-desc">
+              Handcrafted, lightweight statement earrings constructed from repurposed textile and fabric offcuts. Champions sustainable fashion choices, artisan creativity, and textile waste reduction.
+            </p>
+          </div>
+          <div class="project-meta">
+            <span class="project-sdg-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Sustainable Jewelry
+            </span>
+            <span>SDG 12</span>
+          </div>
+        </div>
+
+        <!-- 10. Wypit -->
+        <div class="project-card" data-category="eco">
+          <div>
+            <div class="project-top">
+              <div class="project-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
+              </div>
+              <span class="project-category">Eco-Friendly</span>
+            </div>
+            <h3 class="project-name">Project Wypit</h3>
+            <p class="project-desc">
+              Biodegradable cloth wipes designed specifically for sneaker and shoe care. Replaces disposable synthetic wipes with a durable, eco-friendly solution that minimizes microplastic pollution.
+            </p>
+          </div>
+          <div class="project-meta">
+            <span class="project-sdg-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Zero Microplastics
+            </span>
+            <span>SDG 12 &amp; 14</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="logo-wrap fade">
-    <img src="enactus-removebg-preview.png" alt="Enactus Jain University" />
-  </div>
-    <nav class="footer-links">
-      <a href="https://www.instagram.com/enactus_ju" class="footer-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        Instagram
-      </a>
-      <a href="https://www.linkedin.com/company/enactus-ju-153123288/" class="footer-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
-      <a href="mailto:enactus@jainuniversity.ac.in" class="footer-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Email
-      </a>
-    </nav>
-    <div class="footer-copy">&copy; 2026 Enactus Jain University. All rights reserved.</div>
-  </div>
-</footer>
+  <!-- SIGNATURE EVENTS & INITIATIVES -->
+  <section id="events" class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Campus &amp; Beyond</span>
+        <h2 class="section-title">Signature Events &amp; Milestones</h2>
+        <p class="section-subtitle">
+          From national entrepreneurship summits to massive campus sustainability drives, here is how we mobilize impact.
+        </p>
+      </div>
 
-<script>
-// Fade on scroll
-const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('in')), { threshold: 0.1 });
-document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+      <div class="events-timeline">
+        <!-- Event 1: Illuminate 2026 -->
+        <div class="event-card">
+          <div>
+            <span class="event-date-pill">17 - 18 February 2026</span>
+            <h3>Illuminate 2026: National Social Entrepreneurship Fest</h3>
+            <p>
+              Two-day national summit titled <em>"An Idea is Eternal"</em>. Day 1 featured preliminary pitching rounds at Jain University with Chief Guest Prashanth Ramanujam. The Grand Finale was conducted at the prestigious NIMHANS Convention Centre.
+            </p>
+          </div>
+          <ul class="event-highlights">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              9 Colleges from across India pitched sustainable ventures
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Title Sponsor: BigRock Dirtpark Pvt. Ltd.
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Winners: Team CSA (Winner), Team Raksha (Runner-up)
+            </li>
+          </ul>
+        </div>
 
-// Counter animation
-const counters = document.querySelectorAll('[data-count]');
-let counted = false;
-const cObs = new IntersectionObserver(entries => {
-  if (counted) return;
-  if (entries.some(e => e.isIntersecting)) {
-    counted = true;
-    counters.forEach(el => {
-      const target = +el.dataset.count, suffix = el.dataset.suffix || '', dur = 1400, start = performance.now();
-      const tick = now => {
-        const p = Math.min((now - start) / dur, 1);
-        el.textContent = Math.floor((1 - Math.pow(1 - p, 3)) * target).toLocaleString() + suffix;
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    });
-  }
-}, { threshold: 0.3 });
-if (counters[0]) cObs.observe(counters[0].closest('section'));
+        <!-- Event 2: Enactus Day - Product Launch & Fair -->
+        <div class="event-card">
+          <div>
+            <span class="event-date-pill">26 September 2025</span>
+            <h3>Enactus Day – Product Launch &amp; Fair</h3>
+            <p>
+              Flagship annual exhibition celebrating student enterprise. Launched 11 sustainable student-created products and hosted 17+ sustainable stalls with interactive green games.
+            </p>
+          </div>
+          <ul class="event-highlights">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              11 Eco-friendly products unveiled
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              4 Allied NGO stalls hosted on campus
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              300+ Active student and faculty visitors engaged
+            </li>
+          </ul>
+        </div>
 
-// FAQ accordion
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.closest('.faq-item'), open = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
-    if (!open) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
-  });
-});
+        <!-- Event 3: Threads of Kindness 2.0 -->
+        <div class="event-card">
+          <div>
+            <span class="event-date-pill">Campus Initiative</span>
+            <h3>Cloth Donation Drive: Threads of Kindness 2.0</h3>
+            <p>
+              A one-week campus-wide conscious donation campaign promoting textile recycling, empathy, and sustainable giving across Jain University students, faculty, and staff.
+            </p>
+          </div>
+          <ul class="event-highlights">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              1,500+ Thoughtfully collected wearable garments
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Handed over to Astha Shakti Foundation for distribution
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Portions utilized for textile upcycling &amp; repurposing
+            </li>
+          </ul>
+        </div>
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
-  const t = document.querySelector(a.getAttribute('href'));
-  if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
-}));
-</script>
+        <!-- Event 4: Samagra - Trashformers -->
+        <div class="event-card">
+          <div>
+            <span class="event-date-pill">Sustainability Drive</span>
+            <h3>Samagra – Trashformers</h3>
+            <p>
+              Hands-on initiative for first-year B.Com and B.M.S students in collaboration with NSS and Antaral Jain ISR, transforming recyclable campus waste into aesthetic classroom decor.
+            </p>
+          </div>
+          <ul class="event-highlights">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              200+ Students actively engaged
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              50+ Innovative recycled decor creations
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              15+ Classrooms transformed with eco-friendly art
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE TEAM 2026-27 (SPOTLIGHT) -->
+  <section id="team" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Student Leadership</span>
+        <h2 class="section-title">Core Team 2026 – 2027</h2>
+        <p class="section-subtitle">
+          Meet the student leaders guiding Enactus JAIN (Deemed-to-be University) across strategic verticals, innovation, and community outreach.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Moksha R Patel -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/moksha.png" alt="Moksha R Patel - President" loading="lazy" />
+            <span class="team-role-badge">President</span>
+          </div>
+          <div class="team-info">
+            <div>
+              <h3>Moksha R Patel</h3>
+              <div class="team-term">Core Team 2026 – 27</div>
+            </div>
+            <p class="team-quote">
+              "Fostering an environment where innovation thrives, leading with empathy and collaboration to create lasting sustainable impact."
+            </p>
+          </div>
+        </div>
+
+        <!-- Amrutha P -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/amrutha.png" alt="Amrutha P - Vice-President" loading="lazy" />
+            <span class="team-role-badge">Vice-President</span>
+          </div>
+          <div class="team-info">
+            <div>
+              <h3>Amrutha P</h3>
+              <div class="team-term">Core Team 2026 – 27</div>
+            </div>
+            <p class="team-quote">
+              "Bringing precision, composure, and dedication to ensure organizational excellence and empowering cross-functional teamwork."
+            </p>
+          </div>
+        </div>
+
+        <!-- Lohith Akshay -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/lohit.png" alt="Lohith Akshay - Secretary of Organising" loading="lazy" />
+            <span class="team-role-badge">Sec. of Organising</span>
+          </div>
+          <div class="team-info">
+            <div>
+              <h3>Lohith Akshay</h3>
+              <div class="team-term">Core Team 2026 – 27</div>
+            </div>
+            <p class="team-quote">
+              "Moving through complex challenges with quiet patience and systematic planning to bring seamless execution to every major initiative."
+            </p>
+          </div>
+        </div>
+
+        <!-- Anish Sahoo -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/anish.png" alt="Anish Sahoo - Secretary of Technicals" loading="lazy" />
+            <span class="team-role-badge">Sec. of Technicals</span>
+          </div>
+          <div class="team-info">
+            <div>
+              <h3>Anish Sahoo</h3>
+              <div class="team-term">Core Team 2026 – 27</div>
+            </div>
+            <p class="team-quote">
+              "Technology isn't just about understanding how systems operate — it's about harnessing knowledge to build solutions that serve humanity."
+            </p>
+          </div>
+        </div>
+
+        <!-- Nivas N S -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/nivas.png" alt="Nivas N S - Secretary of Finance" loading="lazy" />
+            <span class="team-role-badge">Sec. of Finance</span>
+          </div>
+          <div class="team-info">
+            <div>
+              <h3>Nivas N S</h3>
+              <div class="team-term">Core Team 2026 – 27</div>
+            </div>
+            <p class="team-quote">
+              "Managing financial transparency, strategic budgeting, and fiscal discipline to sustainably power our real-world social impact projects."
+            </p>
+          </div>
+        </div>
+
+        <!-- D B Sai Anagha -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/anaga.png" alt="D B Sai Anagha - Secretary of Projects" loading="lazy" />
+            <span class="team-role-badge">Sec. of Projects</span>
+          </div>
+          <div class="team-info">
+            <div>
+              <h3>D B Sai Anagha</h3>
+              <div class="team-term">Core Team 2026 – 27</div>
+            </div>
+            <p class="team-quote">
+              "Connecting purposeful ideas with grassroots action, coordinating diverse sustainable ventures to ensure measurable community outcomes."
+            </p>
+          </div>
+        </div>
+
+        <!-- Racheal Mary Mathew -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/rachel.png" alt="Racheal Mary Mathew - Secretary of Public Relations" loading="lazy" />
+            <span class="team-role-badge">Sec. of Public Relations</span>
+          </div>
+          <div class="team-info">
+            <div>
+              <h3>Racheal Mary Mathew</h3>
+              <div class="team-term">Core Team 2026 – 27</div>
+            </div>
+            <p class="team-quote">
+              "Public relations is about building trust — one conversation and authentic relationship at a time, amplifying our social impact far and wide."
+            </p>
+          </div>
+        </div>
+
+        <!-- Samiksha Vishwakarma -->
+        <div class="team-card">
+          <div class="team-img-wrap">
+            <img src="assets/sameeksha.png" alt="Samiksha Vishwakarma - Secretary of Documentation" loading="lazy" />
+            <span class="team-role-badge">Sec. of Documentation</span>
+          </div>
+          <div class="team-info">
+            <div>
+              <h3>Samiksha Vishwakarma</h3>
+              <div class="team-term">Core Team 2026 – 27</div>
+            </div>
+            <p class="team-quote">
+              "Documentation is more than archiving records — it's about capturing milestones, preserving our journey, and turning effort into legacy."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACULTY COORDINATORS SECTION -->
+  <section id="faculty" class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic Mentorship</span>
+        <h2 class="section-title">Faculty Coordinators</h2>
+        <p class="section-subtitle">
+          Guided by esteemed academicians and researchers at the School of Commerce, JAIN (Deemed-to-be University).
+        </p>
+      </div>
+
+      <div class="faculty-grid">
+        <!-- Mr. Vainik V S -->
+        <div class="faculty-card">
+          <span class="faculty-badge">Faculty Coordinator</span>
+          <h3>Mr. Vainik V S</h3>
+          <div class="faculty-dept">Assistant Professor, School of Commerce, JAIN (Deemed-to-be University)</div>
+          <p>
+            With over 7 years of academic expertise in Commerce, Accounting, and Taxation, Mr. Vainik blends research in AI and finance with social entrepreneurship. He guided project <em>Femigreen</em> to the Enactus India National Cup and actively mentors projects including Crunchware, Drapi, Totva, and Lumina.
+          </p>
+        </div>
+
+        <!-- Dr. Swapna H R -->
+        <div class="faculty-card">
+          <span class="faculty-badge">Faculty Mentor</span>
+          <h3>Dr. Swapna H R</h3>
+          <div class="faculty-dept">Assistant Professor, School of Commerce, JAIN (Deemed-to-be University)</div>
+          <p>
+            A distinguished academician with over 18 years of teaching experience and two PhDs. Facilitator of Swayam MOOC courses and recipient of the Research Excellence Award, Dr. Swapna mentors Enactus members in building sound business frameworks and impact-driven leadership.
+          </p>
+        </div>
+
+        <!-- Swathi Shekar -->
+        <div class="faculty-card">
+          <span class="faculty-badge">Faculty Coordinator</span>
+          <h3>Swathi Shekar</h3>
+          <div class="faculty-dept">Assistant Professor, School of Commerce, JAIN (Deemed-to-be University)</div>
+          <p>
+            Specialising in Finance, capital markets, and investment behaviour, Swathi Shekar brings textbook principles to life through practical student mentoring. She encourages emerging technologies and AI applications to build viable, market-tested student ventures.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NGO PARTNERS & SPONSORS -->
+  <section id="partners" class="section partners-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Ecosystem &amp; Alliances</span>
+        <h2 class="section-title">NGO Collaborations &amp; Partners</h2>
+        <p class="section-subtitle">
+          Meaningful social change is co-created with grassroots NGOs, community organizations, and leading corporate sponsors.
+        </p>
+      </div>
+
+      <div class="ngo-grid">
+        <div class="ngo-card">
+          <h4>Astha Shakti Foundation</h4>
+          <p>
+            Partner for our <em>Threads of Kindness 2.0</em> initiative. Collaborating on systematic sorting, distribution of clothing to underserved families, and sustainable textile recycling.
+          </p>
+        </div>
+        <div class="ngo-card">
+          <h4>Manav Charities</h4>
+          <p>
+            Active grassroots partner for <em>Project Crunchware</em>, supporting the manufacturing and adoption of edible natural cutlery to eliminate single-use plastic waste.
+          </p>
+        </div>
+        <div class="ngo-card">
+          <h4>Chilume Social Service Society</h4>
+          <p>
+            Community partner supporting <em>Project Niraa</em> (skincare), <em>Project Lumina</em> (soy candles), and <em>Project Totva</em> (banner totes) to generate sustainable local livelihoods.
+          </p>
+        </div>
+      </div>
+
+      <div class="sponsors-strip">
+        <div class="sponsors-title">Valued Sponsors &amp; Brand Partners</div>
+        <div class="sponsor-tags">
+          <span class="sponsor-tag sponsor-highlight">BigRock Dirtpark (Title Sponsor)</span>
+          <span class="sponsor-tag">MYOP (Make Your Own Perfume)</span>
+          <span class="sponsor-tag">Wendy's</span>
+          <span class="sponsor-tag">Pizza Express</span>
+          <span class="sponsor-tag">California Burrito</span>
+          <span class="sponsor-tag">Domino's</span>
+          <span class="sponsor-tag">Polar Bear</span>
+          <span class="sponsor-tag">Toni &amp; Guy</span>
+          <span class="sponsor-tag">Iritz Salon</span>
+          <span class="sponsor-tag">Sweet Master</span>
+          <span class="sponsor-tag">Mojo Campus</span>
+          <span class="sponsor-tag">Ipsit</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS & MEDIA SECTION (CLEAN SVG ICONS) -->
+  <section id="awards" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag tag-dark">Recognition</span>
+        <h2 class="section-title">Awards &amp; Press Highlights</h2>
+        <p class="section-subtitle">
+          Acknowledged at institutional and national summits for research excellence and entrepreneurial execution.
+        </p>
+      </div>
+
+      <div class="awards-grid">
+        <div class="award-card">
+          <div class="award-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7v2h10v-2h-2c-.55 0-1-.45-1-1v-2.34c3.27-.77 5-3.35 5-6.66V4H5v4c0 3.31 1.73 5.89 5 6.66z"/></svg>
+          </div>
+          <div class="award-title">Runner-Up</div>
+          <div class="award-event">The Purpose Challenge (JAIN Launchpad Entrepreneurship Festival Week)</div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="award-title">Best Research Paper Award</div>
+          <div class="award-event">"Digital Transformation and Its Impact on Students"</div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <div class="award-title">Runner-Up</div>
+          <div class="award-event">Mock Stock Inter-Collegiate Finance Event</div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="award-title">Best Research Paper Award</div>
+          <div class="award-event">"Implications for Sustainability Reporting &amp; Responsible Business in India"</div>
+        </div>
+      </div>
+
+      <div style="margin-top:44px;text-align:center;">
+        <div style="display:inline-flex;align-items:center;gap:10px;padding:10px 24px;border-radius:9999px;background:rgba(255,255,255,0.06);color:#FBBF24;font-size:0.9rem;font-weight:600;border:1px solid rgba(255,255,255,0.1);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+          Press Features: Covered in <em>Suddi Arivu Kendra</em> and <em>Suddi Bidugade</em> for Enactus Day &amp; Sustainable Product Launches
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEDICATED RECRUITMENT SECTION (POLISHED MODERN UI) -->
+  <section id="recruitment" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Join Our Mission</span>
+        <h2 class="section-title">Forum Recruitment</h2>
+        <p class="section-subtitle">
+          Be part of an experiential learning collective where passionate innovators turn ideas into sustainable enterprises.
+        </p>
+      </div>
+
+      <div class="recruitment-card">
+        <div class="recruitment-badge-row">
+          <div class="recruitment-status-pill">
+            <span class="status-pulse-dot"></span>
+            Recruitment Currently Closed
+          </div>
+        </div>
+
+        <h3 class="recruitment-headline">Applications for 2026 – 2027 Are Closed</h3>
+        <p class="recruitment-subtext">
+          Thank you for the incredible interest! The recruitment cycle for the current academic session has completed. Recruitments open annually at the beginning of each academic term for students across all undergraduate &amp; postgraduate programs.
+        </p>
+
+        <!-- Verticals prospective applicants can join next drive -->
+        <div style="text-align:center;margin-bottom:20px;">
+          <h4 style="font-family:var(--font-heading);font-size:1.15rem;font-weight:700;color:var(--black);">
+            Departments You Can Apply For In The Next Drive
+          </h4>
+        </div>
+
+        <div class="verticals-grid">
+          <div class="vertical-box">
+            <div class="vertical-box-top">
+              <div class="vertical-box-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h5>Technicals</h5>
+            </div>
+            <p>Building web platforms, AI solutions, digital tools, and technical infrastructure for the forum.</p>
+          </div>
+
+          <div class="vertical-box">
+            <div class="vertical-box-top">
+              <div class="vertical-box-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h5>Finance</h5>
+            </div>
+            <p>Managing strategic budgeting, fund allocations, corporate sponsorships, and fiscal compliance.</p>
+          </div>
+
+          <div class="vertical-box">
+            <div class="vertical-box-top">
+              <div class="vertical-box-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+              </div>
+              <h5>Projects &amp; Innovation</h5>
+            </div>
+            <p>Ideating, piloting, and scaling community-driven sustainable products and business models.</p>
+          </div>
+
+          <div class="vertical-box">
+            <div class="vertical-box-top">
+              <div class="vertical-box-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <h5>Marketing &amp; Branding</h5>
+            </div>
+            <p>Digital storytelling, creative social campaigns, event promotions, and brand communication.</p>
+          </div>
+
+          <div class="vertical-box">
+            <div class="vertical-box-top">
+              <div class="vertical-box-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <h5>Public Relations</h5>
+            </div>
+            <p>Managing NGO alliances, institutional relations, corporate partners, and media communications.</p>
+          </div>
+
+          <div class="vertical-box">
+            <div class="vertical-box-top">
+              <div class="vertical-box-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <h5>Documentation &amp; Ops</h5>
+            </div>
+            <p>Comprehensive event archiving, annual reporting, minutes, logistics, and official correspondence.</p>
+          </div>
+        </div>
+
+        <div class="recruitment-cta-box">
+          <p>Want to be notified first when the next recruitment drive opens?</p>
+          <div class="recruitment-cta-btns">
+            <a href="https://www.instagram.com/enactus_ju" target="_blank" rel="noopener" class="btn btn-black btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Follow @enactus_ju for Drive Alerts
+            </a>
+            <a href="mailto:enactus@jainuniversity.ac.in" class="btn btn-outline btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Contact Coordinators
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / REACH OUT -->
+  <section id="contact" class="section section-gray" style="padding: 70px 0;">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:36px 44px;box-shadow:var(--shadow-sm);">
+        <div>
+          <h3 style="font-family:var(--font-heading);font-size:1.6rem;font-weight:700;color:var(--black);margin-bottom:6px;">
+            Have a Collaboration Idea or Query?
+          </h3>
+          <p style="color:var(--gray-600);font-size:0.95rem;">
+            Whether you are an NGO looking to collaborate or an aspiring sponsor, we'd love to connect.
+          </p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="mailto:enactus@jainuniversity.ac.in" class="btn btn-yellow btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            enactus@jainuniversity.ac.in
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand / Affiliation -->
+        <div class="footer-brand">
+          <div class="footer-logos">
+            <img src="assets/jain logo png.png" alt="Jain University Logo" class="footer-logo-jain" />
+            <div style="width:1.5px;height:44px;background:rgba(255,255,255,0.2);"></div>
+            <img src="assets/enactus-removebg-preview.png" alt="Enactus Logo" class="footer-logo-enactus" />
+          </div>
+          <p class="footer-desc">
+            Enactus JAIN (Deemed-to-be University) operates under the School of Commerce, Bengaluru. Advancing social entrepreneurship through experiential learning and innovation.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links-list">
+            <li><a href="#about">About Enactus</a></li>
+            <li><a href="#projects">Flagship Projects</a></li>
+            <li><a href="#events">Signature Events</a></li>
+            <li><a href="#team">Core Team 2026-27</a></li>
+            <li><a href="#faculty">Faculty Mentors</a></li>
+          </ul>
+        </div>
+
+        <!-- Recruitment & Recognition -->
+        <div class="footer-col">
+          <h4>Opportunities</h4>
+          <ul class="footer-links-list">
+            <li><a href="#recruitment">Recruitment Status</a></li>
+            <li><a href="#partners">Astha Shakti Foundation</a></li>
+            <li><a href="#partners">Manav Charities</a></li>
+            <li><a href="#partners">Chilume Society</a></li>
+            <li><a href="#awards">Awards &amp; Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Channels -->
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:enactus@jainuniversity.ac.in">enactus@jainuniversity.ac.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://www.instagram.com/enactus_ju" target="_blank" rel="noopener">@enactus_ju</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <a href="https://www.linkedin.com/company/enactus-ju-153123288/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Enactus JAIN (Deemed-to-be University). All rights reserved.
+        </div>
+        <div>
+          Maintained by <strong>Enactus JU Technicals</strong>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
